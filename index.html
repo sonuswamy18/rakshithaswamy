@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hospital Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#addPatientForm">Add Patient</a></li>
+                <li><a href="#addDoctorForm">Add Doctor</a></li>
+                <li><a href="#appointmentForm">Schedule Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Add Patient Form -->
+        <section id="addPatientForm">
+            <h2>Add Patient</h2>
+            <form id="patientForm">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" required>
+                <label for="patientAge">Age:</label>
+                <input type="number" id="patientAge" required>
+                <label for="patientContact">Contact Number:</label>
+                <input type="tel" id="patientContact" required>
+                <button type="submit">Add Patient</button>
+            </form>
+        </section>
+
+        <!-- Add Doctor Form -->
+        <section id="addDoctorForm">
+            <h2>Add Doctor</h2>
+            <form id="doctorForm">
+                <label for="doctorName">Doctor Name:</label>
+                <input type="text" id="doctorName" required>
+                <label for="doctorSpecialization">Specialization:</label>
+                <input type="text" id="doctorSpecialization" required>
+                <label for="doctorContact">Contact Number:</label>
+                <input type="tel" id="doctorContact" required>
+                <button type="submit">Add Doctor</button>
+            </form>
+        </section>
+
+        <!-- Schedule Appointment Form -->
+        <section id="appointmentForm">
+            <h2>Schedule Appointment</h2>
+            <form id="appointment">
+                <label for="patientSelect">Select Patient:</label>
+                <select id="patientSelect" required></select>
+                <label for="doctorSelect">Select Doctor:</label>
+                <select id="doctorSelect" required></select>
+                <label for="appointmentDate">Date and Time:</label>
+                <input type="datetime-local" id="appointmentDate" required>
+                <button type="submit">Schedule Appointment</button>
+            </form>
+        </section>
+
+        <!-- Appointment List -->
+        <section id="appointments">
+            <h2>Scheduled Appointments</h2>
+            <ul id="appointmentsList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hospital Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
